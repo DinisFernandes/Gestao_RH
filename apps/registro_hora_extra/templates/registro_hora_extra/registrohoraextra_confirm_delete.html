@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <p>Edit</p>
+    <form method="post">
+        {% csrf_token %}
+        <h1>Deseja apagar a HE do Banco de Horas {{ obj }}</h1>
+        {{ form }}
+        <button type="submit" class="btn btn-danger">Confirmar</button>
+    </form>
+{% endblock %}
